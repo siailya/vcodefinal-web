@@ -110,10 +110,10 @@ function App() {
 
   const sendSetStatus = (status) => {
     setShowSpinner(true)
-    Promise.all(selectedMessages.map(msgIndex => axios.post(BACKEND + "setReadStatus", {
-      messageIndex: msgIndex,
-      messageStatus: status
-    }))).then(() => {
+    axios.post(BACKEND + "setManyMessagesStatus",
+      {messagesIndexes: selectedMessages, status: status}).then(() => {
+      loadMessages()
+    }).then(() => {
       loadMessages()
       setShowSpinner(false)
     })
@@ -129,12 +129,10 @@ function App() {
 
   const toggleSelected = () => {
     setShowSpinner(true)
-    Promise.all(selectedMessages.map(msgIndex => axios.post(BACKEND + "setReadStatus", {
-      messageIndex: msgIndex,
-      messageStatus: !messages[msgIndex].read
-    }))).then(() => {
+
+    axios.post(BACKEND + "setManyMessagesStatus",
+      {messagesIndexes: selectedMessages, status: "toggle"}).then(() => {
       loadMessages()
-      setShowSpinner(false)
     })
   }
 

@@ -3,6 +3,7 @@ import history from "connect-history-api-fallback"
 import dotenv from 'dotenv';
 import path from "path";
 import bodyParser from "body-parser";
+import {stat} from "fs";
 
 const cors = require('cors')
 const sampleMessages = require("../sample/small.json")
@@ -36,6 +37,28 @@ app.post("/api/setReadStatus", (req, res) => {
   const {messageIndex, messageStatus} = req.body
 
   currentMessagesList[messageIndex].read = messageStatus
+
+  res.send("OK")
+})
+
+app.post("/api/setManyMessagesStatus", (req, res) => {
+  const {messagesIndexes, status} = req.body
+
+  if (status === "toggle") {
+    currentMessagesList = currentMessagesList.map(m => {
+      if (messagesIndexes.includes(m.index)) {
+        return {...m, read: !m.read}
+      }
+      return m
+    })
+  } else {
+    currentMessagesList = currentMessagesList.map(m => {
+      if (messagesIndexes.includes(m.index)) {
+        return {...m, read: status}
+      }
+      return m
+    })
+  }
 
   res.send("OK")
 })
