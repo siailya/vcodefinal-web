@@ -22,6 +22,50 @@ html[theme="dark"] {
   --shadow-sm: rgba(255, 255, 255, .15)
 }
 
+html[theme="contrast"] {
+  --accent-main: #ffffff;
+  --text-color: #ffffff;
+  --background-primary: #000000;
+  --background-secondary: #000000;
+  --shadow-sm: rgba(255, 255, 255, 0)
+}
+
+html[theme="contrast"] .vkuiButton--lvl-primary.vkuiButton--clr-accent{
+  color: black!important;
+}
+
 html[theme] *{
   transition: background-color .3s ease;
+}
+
+html[theme="kittens"] {
+  --accent-main: #ff49b6;
+  --text-color: #252525;
+  --background-primary: #ffffff;
+  --background-secondary: #ffe5f5;
+  --shadow-sm: rgba(221, 156, 236, 0.18)
+}
+
+html[theme="kittens"] body {
+  background: url("kittens.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html[theme="kittens"] .messages-tint {
+  background: rgba(255, 229, 245, .8);
+}
+
+html[theme="mil"] {
+  --accent-main: #6a6a6a;
+  --text-color: #ffffff;
+  --background-primary: #2a2a2a;
+  --background-secondary: #000000;
+  --shadow-sm: rgba(255, 255, 255, 0.18)
+}
+
+html[theme="mil"] body {
+  background: url("mil.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

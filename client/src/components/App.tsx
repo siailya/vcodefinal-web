@@ -35,6 +35,12 @@ function App() {
     if (currentTheme === "light") {
       setCurrentTheme("dark")
     } else if (currentTheme === "dark") {
+      setCurrentTheme("contrast")
+    } else if (currentTheme === "contrast") {
+      setCurrentTheme("kittens")
+    } else if (currentTheme === "kittens") {
+      setCurrentTheme("mil")
+    } else {
       setCurrentTheme("light")
     }
   }
@@ -119,7 +125,7 @@ function App() {
 
             </div>
 
-            <Card style={{overflow: "hidden"}}>
+            <Card style={{overflow: "hidden"}} className="messages-tint">
               <div className="list-view">
                 {
                   messages.map((message, index) => {

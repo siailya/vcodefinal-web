@@ -86,7 +86,7 @@ button:hover {
     background: rgba(111, 55, 227, .1);
 }
 
-.message-item.read:not(.selected){
+html[theme]:not([theme="contrast"]) .message-item.read:not(.selected){
     opacity: .5;
 }
 
