@@ -50,7 +50,7 @@ const MessageItem = ({message, selected, toggleSelect, openPreview, id}) => {
             </SimpleCell>
           </div>
           <div className="my-auto preview row align-content-center">
-            <div className="col-1 d-flex">
+            <div className="col-2 d-flex">
               {
                 !message.read && <div className="unread-indicator my-auto"></div>
               }
@@ -62,7 +62,7 @@ const MessageItem = ({message, selected, toggleSelect, openPreview, id}) => {
                 message.flag && <span className="material-icons-outlined flag-indicator ms-1 my-auto">flag</span>
               }
             </div>
-            <div className="col-9">
+            <div className="col-8">
               <h6 className="m-0 w-100 title-message d-flex">
                 {
                   message.finance &&
