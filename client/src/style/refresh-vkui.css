@@ -1,0 +1,12 @@
+.vkuiButton--lvl-primary.vkuiButton--clr-accent {
+    background: var(--accent-main);
+}
+
+.vkuiCard {
+    background: var(--background-secondary);
+    color: var(--text-color)
+}
+
+.vkuiCheckbox__icon--on {
+    color: var(--accent-main)
+}

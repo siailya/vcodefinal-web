@@ -1,0 +1,163 @@
+.service-header {
+    background: var(--background-secondary);
+    box-shadow: 0 0 5px 0 var(--shadow-sm);
+    border-radius: 0 0 20px 20px;
+}
+
+.service-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent-main);
+}
+
+.theme-switcher button {
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: var(--background-primary);
+    transition: all .3s ease;
+}
+
+button:hover {
+    box-shadow: 0 0 12px 0 var(--shadow-sm);
+}
+
+.theme-switcher button span {
+    color: var(--accent-main)
+}
+
+.upload-data {
+    color: white!important;
+    fill: white!important;
+}
+
+.controls {
+    color: var(--text-color)
+}
+
+.list-view {
+    height: 70vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-main);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--background-secondary);
+}
+
+.message-item .message-item__inner, .from-message{
+    color: var(--text-color) !important;
+}
+
+.text-message {
+    font-weight: 300!important;
+    overflow: hidden;
+}
+
+.from {
+    min-width: 350px;
+    max-width: 350px;
+}
+
+.preview {
+    width: 70%;
+}
+
+.from, .preview, .title-message, .text-message {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.message-item {
+    transition: background-color .3s ease, opacity .3 ease;
+}
+
+.message-item.selected {
+    background: rgba(111, 55, 227, .1);
+}
+
+.message-item.read:not(.selected){
+    opacity: .5;
+}
+
+.unread-indicator {
+    width: 10px;
+    height: 10px;
+    background: var(--accent-main);
+    border-radius: 100px;
+}
+
+.important-indicator {
+    color: rgb(229, 61, 61)
+}
+
+.flag-indicator, .finances-indicator, .lock-indicator {
+    color: var(--accent-main);
+}
+
+.attachment {
+    border-radius: 100px;
+    padding: 4px;
+    border: solid 1px rgba(155, 155, 155);
+    max-width: 100px;
+    overflow: hidden;
+}
+
+.attachment img {
+    height: 24px;
+    width: 24px;
+    object-fit: cover;
+    border-radius: 100px;
+}
+
+.attachment .filename {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.vkuiCheckbox__content {
+    color: var(--text-color) !important
+}
+
+.attachment-preview {
+    position: absolute;
+}
+
+.preview-modal {
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    z-index: 1000;
+    top: -100vh;
+    transition: all .3s ease;
+}
+
+.preview-modal.show {
+    top: 30%;
+}
+
+.backdrop {
+    z-index: 99;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .3s ease;
+}
+
+.backdrop:not(.show) {
+    top: -100vh;
+}

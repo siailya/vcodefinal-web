@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+html {
+  --accent-main: #20005b;
+  --text-color: #212121;
+  --background-primary: #f3f3f3;
+  --background-secondary: #FFFFFF;
+  --shadow-sm: rgba(0, 0, 0, .15)
+}
+
+body {
+  margin: 0;
+  background: var(--background-primary);
+  font-family: 'Open Sans', sans-serif;
+}
+
+html[theme="dark"] {
+  --accent-main: #6f37e3;
+  --text-color: #ffffff;
+  --background-primary: #202020;
+  --background-secondary: #3f3f3f;
+  --shadow-sm: rgba(255, 255, 255, .15)
+}
+
+html[theme] *{
+  transition: background-color .3s ease;
+}
