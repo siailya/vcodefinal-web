@@ -69,3 +69,9 @@ html[theme="mil"] body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.loadingSpinner {
+  position: absolute;
+  z-index: 1000;
+
+}

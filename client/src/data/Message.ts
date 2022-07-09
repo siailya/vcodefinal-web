@@ -43,6 +43,7 @@ export class Message {
   }
 
   author: Author
+  index: number
   dateTime: string
   text: string
   title: string

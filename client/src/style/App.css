@@ -39,7 +39,7 @@ button:hover {
 .list-view {
     height: 70vh;
     overflow: auto;
-    scroll-behavior: smooth;
+    /*scroll-behavior: smooth;*/
 }
 
 ::-webkit-scrollbar {
